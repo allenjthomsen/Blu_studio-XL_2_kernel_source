@@ -573,8 +573,8 @@ static s32 tpd_i2c_probe(struct i2c_client *client, const struct i2c_device_id *
 	printk(" tpd_i2c_probe start.\n");
 
 //#ifdef CONFIG_MTK_BOOT
-    if (RECOVERY_BOOT == get_boot_mode())   // important
-        return 0;
+    //if (RECOVERY_BOOT == get_boot_mode())   // important
+       // return -1;
 //#endif
 
 	probe_thread = kthread_run(tpd_registration, (void *)client, "tpd_probe");
